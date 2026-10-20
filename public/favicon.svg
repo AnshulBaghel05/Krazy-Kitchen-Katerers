@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Rich Caribbean Sun & Spice Gradient -->
+    <linearGradient id="warmSun" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="35%" stop-color="#EE9B3B"/>
+      <stop offset="85%" stop-color="#E15A09"/>
+      <stop offset="100%" stop-color="#C2410C"/>
+    </linearGradient>
+
+    <!-- Subtle Drop Shadows -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <filter id="hatShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#7C2D12" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Squircle App Badge with Caribbean warmth -->
+  <rect x="16" y="16" width="480" height="480" rx="124" fill="url(#warmSun)" stroke="#B45309" stroke-width="4"/>
+
+  <!-- Inner subtle golden rim ring -->
+  <rect x="28" y="28" width="456" height="456" rx="112" fill="none" stroke="#FDE68A" stroke-width="3" stroke-opacity="0.6"/>
+
+  <!-- Main Emblem Group with Shadow -->
+  <g filter="url(#shadow)">
+    <!-- Chef Toque (White with crisp depth) -->
+    <g filter="url(#hatShadow)">
+      <!-- Hat Puffs -->
+      <path d="M190 195 C 160 175, 150 120, 195 95 C 220 80, 250 85, 256 95 C 262 85, 292 80, 317 95 C 362 120, 352 175, 322 195 Z" fill="#FFFFFF"/>
+      <!-- Center Main Puff -->
+      <path d="M215 130 C 220 80, 292 80, 297 130 C 275 135, 235 135, 215 130 Z" fill="#FFFFFF"/>
+      <path d="M225 105 C 235 70, 277 70, 287 105" fill="#FFFFFF"/>
+      
+      <!-- Hat Pleat Shadows / Creases -->
+      <path d="M220 185 C 222 150, 226 135, 230 115" stroke="#E2E8F0" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <path d="M256 185 C 256 145, 256 130, 256 108" stroke="#CBD5E1" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <path d="M292 185 C 290 150, 286 135, 282 115" stroke="#E2E8F0" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+      <!-- Hat Band (Brim) -->
+      <rect x="195" y="190" width="122" height="30" rx="7" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="3"/>
+      <!-- Band accent stripe in brand gold -->
+      <rect x="202" y="200" width="108" height="6" rx="3" fill="#EE9B3B"/>
+    </g>
+
+    <!-- Scotch Bonnet / Caribbean Flame Accent at top right of the hat -->
+    <path d="M326 135 C 342 120, 355 125, 356 138 C 358 152, 340 168, 328 174 C 333 162, 335 152, 326 135 Z" fill="#DC2626"/>
+    <path d="M334 142 C 344 135, 348 140, 348 147 C 348 155, 340 162, 334 165 C 337 158, 338 152, 334 142 Z" fill="#F59E0B"/>
+
+    <!-- Bold Monogram "K" for Krazy Kitchen Katerers -->
+    <!-- Vertical stem -->
+    <rect x="145" y="235" width="54" height="205" rx="14" fill="#111111"/>
+    
+    <!-- Upper arm with dynamic diagonal sweep -->
+    <path d="M192 328 L 298 238 C 307 230, 322 232, 329 242 L 340 256 C 347 266, 344 280, 334 288 L 244 362 Z" fill="#111111"/>
+    
+    <!-- Lower arm with sturdy grounded base -->
+    <path d="M228 340 L 324 426 C 333 434, 347 433, 354 424 L 366 409 C 373 399, 370 385, 360 376 L 274 300 Z" fill="#111111"/>
+
+    <!-- Small gold highlight dot / spice star in center junction -->
+    <circle cx="218" cy="336" r="7" fill="#FCD34D"/>
+  </g>
+
+  <!-- Crisp Modern Subtle Caption Base: KATERERS dot KITCHEN -->
+  <circle cx="172" cy="458" r="4" fill="#111111" fill-opacity="0.7"/>
+  <circle cx="256" cy="458" r="5" fill="#111111" fill-opacity="0.85"/>
+  <circle cx="340" cy="458" r="4" fill="#111111" fill-opacity="0.7"/>
+</svg>
