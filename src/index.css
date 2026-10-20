@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #FFFFFF;
+  --surface: #F2F2F2;
+  --ink: #111111;
+  --ink-muted: #4A4A4A;
+  --black: #0A0A0A;
+  --line: #DDDDDD;
+  --yellow: #F0C964;
+  --orange: #E67A3E;
+  --green: #9CBF77;
+  --cta: #EE9B3B;
+  --cta-hover: #D98826;
+  --r-img: 30px;
+  --r-card: 24px;
+  --r-input: 14px;
+  --r-pill: 9999px;
+  --r-block: 40px;
+}
+
+@theme {
+  --font-display: 'Dancing Script', cursive, sans-serif;
+  --font-body: 'Figtree', sans-serif;
+  --color-bg: #FFFFFF;
+  --color-surface: #F2F2F2;
+  --color-ink: #111111;
+  --color-ink-muted: #4A4A4A;
+  --color-black: #0A0A0A;
+  --color-line: #DDDDDD;
+  --color-yellow: #F0C964;
+  --color-orange: #E67A3E;
+  --color-green: #9CBF77;
+  --color-cta: #EE9B3B;
+  --color-cta-hover: #D98826;
+}
+
+/* Base Typography & Resets */
+body {
+  font-family: 'Figtree', sans-serif;
+  color: #111111;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: 'Dancing Script', cursive, sans-serif;
+}
+
+.font-body {
+  font-family: 'Figtree', sans-serif;
+}
+
+/* Script H2 with 4px green underline non-negotiable */
+.script-h2 {
+  font-family: 'Dancing Script', cursive, sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  position: relative;
+  font-size: clamp(40px, 4.5vw, 56px);
+  line-height: 1.15;
+  color: #111111;
+  padding-bottom: 8px;
+}
+
+.script-h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #9CBF77;
+  border-radius: 2px;
+}
+
+/* Fluid Clamp utilities */
+.text-hero-wordmark {
+  font-size: clamp(88px, 11vw, 168px);
+  line-height: 0.95;
+}
+
+.text-fluid-h2 {
+  font-size: clamp(40px, 4.5vw, 56px);
+  line-height: 1.15;
+}
+
+.text-fluid-h3 {
+  font-size: clamp(20px, 2.2vw, 24px);
+  line-height: 1.25;
+}
+
+.text-fluid-body {
+  font-size: clamp(16px, 1.8vw, 18px);
+  line-height: 1.6;
+}
+
+.text-fluid-small {
+  font-size: clamp(13px, 1.4vw, 14px);
+  line-height: 1.5;
+}
+
+.section-padding {
+  padding-top: clamp(72px, 10vw, 140px);
+  padding-bottom: clamp(72px, 10vw, 140px);
+}
+
+/* Hairline menu row leader */
+.hairline-leader {
+  flex-grow: 1;
+  border-bottom: 1px dotted #CCCCCC;
+  margin: 0 12px;
+  position: relative;
+  bottom: 4px;
+}
+
+/* Inputs: grey borderless rounded inputs */
+.app-input {
+  background-color: #F2F2F2;
+  border: none;
+  outline: none;
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-size: 15px;
+  color: #111111;
+  width: 100%;
+  transition: background-color 200ms ease;
+}
+
+.app-input:focus {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+  background-color: #ECECEC;
+}
+
+.app-input::placeholder {
+  color: #777777;
+}
+
+/* Focus rings: 2px #111 with 2px offset */
+*:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+/* Marquee for DishStrip */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee:focus-within {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+    transform: none;
+    overflow-x: auto;
+  }
+  
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Krazy Kitchen Katerers",
+  "description": "Modern Caribbean fusion & Creole soul restaurant and premier catering in Brooklyn, NY. Authentic signature dishes, festive event catering, online ordering, and table reservations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
